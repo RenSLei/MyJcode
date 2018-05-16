@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>.org.eclipse.jdt.core.external.folders</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.link0</name>
+			<type>2</type>
+			<location>C:/Program Files (x86)/MySQL/Connector J 5.1/src</location>
+		</link>
+		<link>
+			<name>.link1</name>
+			<type>2</type>
+			<location>E:/java/四、JDBC/源文件以及jar包/spring-framework源码/spring-framework-master</location>
+		</link>
+		<link>
+			<name>.link8</name>
+			<type>2</type>
+			<location>E:/java/四、JDBC/源文件以及jar包/spring-framework源码/spring-framework-master</location>
+		</link>
+	</linkedResources>
+</projectDescription>

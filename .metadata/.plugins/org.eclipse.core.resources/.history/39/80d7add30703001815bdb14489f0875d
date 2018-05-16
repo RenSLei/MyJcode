@@ -1,0 +1,55 @@
+                                                     
+                                                     eclipse skills
+
+1、如果自定义了快捷键，但是使用还无效，可能是某些软件的热键冲突，找到冲突软件干掉快捷键
+ 
+2、按住ctrl可以类似超链接点击进去，查看源码。 
+ 
+3、鼠标放在特定的方法或者类上，可以查看方法或类的文档注释
+   
+4、 将光标放在}后面双击可以看到该}所作用的范围
+ 
+ Keys快捷键的设置Bind以及UnBind：	Window-Preference-General-Keys-
+ 
+ 左侧explorer显示与隐藏：	Window->Show View->Project Explorer或Package Explorer
+ 
+ 以及光标放在某一行，左边有一段亮度条，即该行属于的方法或类的长度
+ 
+ 在工程中的src文件下导入普通文件夹：
+ 
+ctrl+shift+r：打开资源,这可能是所有快捷键组合中最省时间的了。
+ 这组快捷键可以让你打开你的工作区中任何一个文件，而你只需要按下文件名或文件名中的前几个字母
+ 
+ctrl+o 查看类中的所有方法，它可以列出当前类中的所有方法及属性，你只需输入你想要查询的方法名，点击enter就能够直接跳转至你想去的位置
+ 
+ctrl+e 列出当前打开的选项卡，上下可以选择以便快速切换，另，ctrl+pgup/pgdn可以切换选项卡
+ 
+ctrl +- 可以增大/减小字体
+
+ctrl+ z 撤销上一步操作;ctrl+y 前进一步
+
+ctrl+m 全屏当前view
+
+ctrl+2 释放再按L,自动补全代码：如写new String("fdf");自动补全为：String String = new String("fdf");
+
+alt+shift+r:鼠标移动到方法名或者属性名上按下，重命名
+
+ctrl+left/right :调到一个词的左边/右边; ctrl+shift+left/right:选择一个词
+
+ctrl+down/up:向下/上滚动
+
+shift+enter:在当前行插入新的空白行；
+ctrl+shift+enter：在当前行的上一行插入一行空白行
+ 
+ctrl+Q ：跳到最后一次编辑的地方
+ 
+Ait+up/down：将当前行上移或者下移
+ 
+Alt+enter:弹出properties
+ 
+
+
+
+
+
+

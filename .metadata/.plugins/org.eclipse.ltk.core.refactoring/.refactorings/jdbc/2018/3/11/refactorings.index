@@ -1,0 +1,13 @@
+1520763019049	Rename type 'JdbcBaseInstance'
+1520821317896	Copy compilation unit
+1520823108633	Rename package 'priv.rsl.jdbc'
+1520823250838	Rename type 'ConnectorBase'
+1520823269845	Rename type 'ConnectorTempalate'
+1521182077576	Rename method 'create'
+1521183142628	Rename method 'create_by_ps'
+1521184603335	Rename local variable 'ps'
+1521188143921	Rename method 'read'
+1521188429643	Delete element
+1521188436993	Delete element
+1521189599104	Delete element
+1521206781632	Rename local variable 'fis'

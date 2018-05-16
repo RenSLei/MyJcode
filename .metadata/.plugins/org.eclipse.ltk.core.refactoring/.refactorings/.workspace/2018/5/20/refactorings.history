@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;五、javaWeb&apos;" deleteContents="false" description="Delete resource &apos;五、javaWeb&apos;" element1="/五、javaWeb" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1526303704000"/>&#x0A;<refactoring comment="Delete resource &apos;UploadProjectToGithubTest&apos;" deleteContents="true" description="Delete resource &apos;UploadProjectToGithubTest&apos;" element1="/UploadProjectToGithubTest" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1526441997266"/>
+</session>

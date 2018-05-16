@@ -1,0 +1,16 @@
+1521350793061	Rename local variable 'bufw'
+1521351091363	Rename local variable 'bufr'
+1521351728385	Delete element
+1521351859549	Delete element
+1521356120202	Move compilation unit
+1521356124622	Move compilation unit
+1521356130748	Delete element
+1521356139256	Move compilation unit
+1521356144782	Move compilation unit
+1521356261569	Rename package 'priv.rsl.jdbc1'
+1521356269260	Delete element
+1521372724740	Encapsulate field 'password'
+1521376632499	Extract method 'mappingUser'
+1521380751672	Rename local variable 'st'
+1521441000046	Copy compilation unit
+1521857109354	Rename resource 'ReadMe.txt'
