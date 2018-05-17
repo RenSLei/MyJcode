@@ -1,7 +1,6 @@
-INDEX VERSION 1.4+E:\OneDrive\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2562100453.index
-143629496.index
+INDEX VERSION 1.4+F:\MyJcode\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 1067094681.index
-3705832960.index
-798144326.index
-3017905446.index
+1195005685.index
+3537556787.index
+3806226693.index
+165591935.index
