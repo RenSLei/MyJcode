@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="F:\MyJcode"/>
 		<item value="E:\OneDrive\eclipse-workspace"/>
 		<item value="E:\OneDrive\eclipse-workspace\basal"/>
 		<item value="E:\OneDrive\java\五、javaWeb"/>
