@@ -25,65 +25,74 @@ interface用于定义接口。
 
 */
 
-interface Inter
-{
-	public static final int NUM = 3;
-	public abstract void show();
+interface Inter {
+    public static final int NUM = 3;
+
+    public abstract void show();
 
 }
 
-interface InterA
-{
+interface InterA {
 
-		public abstract void method();
+    public abstract void method();
 
 }
 
-class Demo
-{
-	public void function(){}
+class Demo {
+    public void function() {
+    }
 }
 
-class Test extends Demo implements Inter,InterA/*可以先继承再多实现,可以用来扩展一个类的功能。
-一个类可以实现多个接口，但对类只能单继承。因为如果类与类可以多继承，父类可能含有相同功能名称
-子类在调用的时候不知道调用哪一个
-而类对接口可以多实现是因为接口中的方法都是抽象的，而抽象方法中没有主体
-需要子类去写具体主体，即不存在子类不知道访问哪个函数的问题*/
+class Test extends Demo implements Inter, InterA
+/*
+* 可以先继承再多实现,可以用来扩展一个类的功能。
+* 一个类可以实现多个接口，但对类只能单继承。因为如果类与类可以多继承，父类可能含有相同功能名称 子类在调用的时候不知道调用哪一个
+* 而类对接口可以多实现是因为接口中的方法都是抽象的，而抽象方法中没有主体 需要子类去写具体主体，即不存在子类不知道访问哪个函数的问题
+*/
 {
-	public void show(){}/*对接口Inter中show方法进行覆盖*/
-	public void method(){}/*对接口InterA中method方法进行覆盖*/
+    public void show() {
+	System.out.println("重写接口的方法show");
+    }/* 对接口Inter中show方法进行覆盖 */
+
+    public void method() {
+	System.out.println("重写接口A的方法method");
+    }/* 对接口InterA中method方法进行覆盖 */
 }
 
-interface A
-{
-	void methodA();
+interface A {
+    void methodA();
 }
 
-interface B //extends A
+interface B // extends A
 {
-	void methodB();
+    void methodB();
 }
 
-interface C extends B,A/*接口之间可以多继承，因为没有方法体，但在方法名相同时，必须返回值类型相同*/
+interface C extends B, A/* 接口之间可以多继承，因为没有方法体，但在方法名相同时，必须返回值类型相同 */
 {
-	void methodC();
-}
-class D implements C
-{
-	/*D实现C,则D中需要覆盖三个方法，注意实现接口一定要加public*/
-	public void methodC(){}
-	public void methodB(){}
-	public void methodA(){}
+    void methodC();
 }
 
-class InterfaceDemo
-{
-	public static void main(String[] args) 
-	{
-		Test t = new Test();
-		System.out.println("t.NUM");
-		System.out.println("Test.NUM");
-		System.out.println("Inter.NUM");
-		
-	}
+class D implements C {
+    /* D实现C,则D中需要覆盖三个方法，注意实现接口一定要加public */
+    public void methodC() {
+    }
+
+    public void methodB() {
+    }
+
+    public void methodA() {
+    }
+}
+
+class InterfaceDemo {
+    public static void main(String[] args) {
+	Test t = new Test();
+	System.out.println(t.NUM);
+	System.out.println(Test.NUM);
+	System.out.println(Inter.NUM);
+	t.method();
+	t.show();
+
+    }
 }

@@ -40,12 +40,16 @@ class Single
 	}
 
 	/*下面是单例设计模式的三串代码*/
-	private Single(){}/*1、私有化，禁止其他程序建立该类对象*/
-
-	private static Single s = new Single();/*2、在类中创建一个本类对象，
-											静态方法只能调用静态成员，所以s是是静态的，内部成员一般私有化*/
-	public static Single getInstance()/*3、提供一个方法可以获取到该对象，
-										只能通过类名调用（因为程序不可以自己创建该类对象）的方法只能是静态方法*/
+	
+	/*1、私有化，禁止其他程序建立该类对象*/
+	private Single(){}
+	
+        /*2、在类中创建一个本类对象，静态方法只能调用静态成员，所以s是是静态的，内部成员一般私有化*/
+	private static Single s = new Single();
+	
+	/*3、提供一个方法可以获取到该对象，
+	只能通过类名调用（因为程序不可以自己创建该类对象）的方法只能是静态方法*/
+	public static Single getInstance()
 	{
 		return s;
 	}
@@ -57,15 +61,20 @@ class Single
 class SingleDemo
 {
 	public static void main(String[] args) 
-	{
-		Single s1 = Single.getInstance();/*Single一旦加载，则里面静态随之加载，即建立新的对象s,接着调用getInstance方法，将s赋给ss
-											因此ss和s同时指向此对象*/
+	{	
+	    	/*Single一旦加载，则里面静态随之加载，即建立新的对象s,接着调用getInstance方法，将s赋给ss
+		因此ss和s同时指向此对象*/
+		Single s1 = Single.getInstance();
 		s1.setNum(8);
 		System.out.printf("属性num是%-3d；属性name是%s\n",s1.getNum(),s1.getName());
 		Single s2 = Single.getInstance();/*新建一个同样指向s的变量s2*/
 		s2.setName("ren shilei");
-		System.out.printf("属性num是%-3d；属性name是%s",s2.getNum(),s2.getName());/*注意，s、s1、s2都指向同一个对象，
-																					当用s1改变num后，再用s2改变name后，
-																					打印此对象的两个属性，都显示*/
+		
+		/*注意，s、s1、s2都指向同一个对象，当用s1改变num后，
+		 再用s2改变name后，打印此对象的两个属性，都显示*/
+		System.out.printf("属性num是%-3d；属性name是%s",s2.getNum(),s2.getName());
+//		即操作的是一个对象的属性值，因为单例模式就是只有一个对象，
+//		而Single s2 = Single.getInstance();只是新建一个指向对象s的引用变量而已。
+		
 	}
 }

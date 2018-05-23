@@ -27,10 +27,10 @@ class StaticCodeDemo
 	}
 	public static void main(String[] args) 
 	{
-		new StaticCode1();/*类StaticCodeDemo被加载进内存，首先执行StaticCodeDemo中的静态代码块
+		new StaticCode();/*类StaticCodeDemo被加载进内存，首先执行StaticCodeDemo中的静态代码块
 							打印b,再打印c；接着执行主函数，主函数中，类StaticCode被加载进内存，
 							首先执行StaticCode中的静态代码块，打印a；*/
-		new StaticCode1();//注意，类一旦被加载进内存后，就不再初始化该类了，因此打印结果是：c b a
+		new StaticCode();//注意，类一旦被加载进内存后，就不再初始化该类了，因此打印结果是：c b a
 		System.out.println("Hello World!");
 	}
 	static

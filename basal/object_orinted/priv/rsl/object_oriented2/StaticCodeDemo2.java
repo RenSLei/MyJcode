@@ -19,7 +19,7 @@ class StaticCode2
 	{
 		System.out.println("b");
 	}
-	/*静态代码块，是初始化类的，因为创建了一个匿名对象,所以类会加载，所以会打印b*/
+	/*静态代码块，是初始化类的，因为创建了一个匿名对象,所以类会加载，所以会打印a*/
 	static
 	{
 		System.out.println("a");

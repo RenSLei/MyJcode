@@ -62,8 +62,8 @@ class  ExtendsDemo3
 {
 	public static void main(String[] args) 
 	{
-		Zi3 z = new Zi3();//子类中一建立对象z，则对对象初始化的构造函数先执行super();即打印fu run接着打印zi run
-		Zi3 z1 = new Zi3(5);//子类中一建立对象z1，则对对象初始化的构造函数先执行super();即打印fu run接着打印x=5
+		new Zi3();//子类中一建立对象z，则对对象初始化的构造函数先执行super();即打印fu run接着打印zi run
+		new Zi3(5);//子类中一建立对象z1，则对对象初始化的构造函数先执行super();即打印fu run接着打印x=5
 	}
 }
 

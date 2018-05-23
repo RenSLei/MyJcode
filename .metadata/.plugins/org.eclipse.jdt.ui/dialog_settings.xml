@@ -24,7 +24,7 @@
 	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
 	<item value="1920" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
 	<item value="1030" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
-	<item value="C:\Program Files (x86)\MySQL\Connector J 5.1" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="F:\java\四、JDBC\spring-framework-5.0.5.RELEASE-dist\spring-framework-5.0.5.RELEASE\libs" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="D:\eclipse-workspace\javase_study_myself1\day07_面向对象" key="org.eclipse.jdt.ui.last.external.project"/>
 	<list key="SearchScopeActionGroup.working_set">
 	</list>

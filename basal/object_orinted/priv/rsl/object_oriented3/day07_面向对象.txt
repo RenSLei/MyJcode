@@ -1,8 +1,4 @@
-01-02继承   ----
-
-11模板方法模式   ----GetTimeDemo.java
-
-12-15接口   ----InterfaceDemo.java
+01-02继承   ---- 继承.png
 
 4子父类中变量的特点   ----ExtendsDemo.java
 
@@ -12,3 +8,6 @@
 
 8-10抽象测试   ----AbstractTest.java
 
+11模板方法模式   ----GetTimeDemo.java
+
+12-15接口   ----InterfaceDemo.java

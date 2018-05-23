@@ -16,33 +16,30 @@ package priv.rsl.object_oriented3;
 
 */
 
-abstract class GetTime
-{
-	public final void getTime()
-	{
-		long start = System.currentTimeMillis();
-		runcode();
-		long end = System.currentTimeMillis();
-		System.out.println("毫秒："+(end-start));
-	}
-	public abstract void runcode();
+abstract class GetTime {
+    public final void getTime() {
+	long start = System.currentTimeMillis();
+	runcode();
+	long end = System.currentTimeMillis();
+	System.out.println("毫秒：" + (end - start));
+    }
+
+    public abstract void runcode();
 }
-/*以上就是封装好的代码，用于对一段代码进行测试运行时间*/
-class SubTime extends GetTime
-{
-	public void runcode()/*在子类中复写功能主体，以便修改代码主体*/
-	{
-		for(int x =0;x<1000;x++)
-		{
-			System.out.print(x);
-		}
+
+/* 以上就是封装好的代码，用于对一段代码进行测试运行时间 */
+class SubTime extends GetTime {
+    public void runcode()/* 在子类中复写功能主体，以便修改代码主体 */
+    {
+	for (int x = 0; x < 100; x++) {
+	    System.out.print(x);
 	}
+    }
 }
-class GetTimeDemo 
-{
-	public static void main(String[] args) 
-	{
-		SubTime t = new SubTime();
-		t.getTime();
-	}
+
+class GetTimeDemo {
+    public static void main(String[] args) {
+	SubTime t = new SubTime();
+	t.getTime();
+    }
 }
