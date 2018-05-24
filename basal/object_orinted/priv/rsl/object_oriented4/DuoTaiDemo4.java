@@ -38,7 +38,7 @@ class  DuoTaiDemo4
 {
 	public static void main(String[] args) 
 	{
-		Fu f = new Zi();
+		Fu f = new Zi();//注意是多态的形式，和一般的new对象不同
 
 		f.method1();
 		f.method2();

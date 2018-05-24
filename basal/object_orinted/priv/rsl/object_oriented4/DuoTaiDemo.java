@@ -32,87 +32,62 @@ package priv.rsl.object_oriented4;
 
 */
 
-abstract class Animal
-{
-	public abstract void eat();
+abstract class Animal {
+    public abstract void eat();
 
 }
 
-class Cat extends Animal
-{
-	public void eat()
-	{
-		System.out.println("吃鱼");
-	}
+class Cat extends Animal {
+    public void eat() {
+	System.out.println("吃鱼");
+    }
 
-	public void catchMouse()
-	{
-		System.out.println("抓老鼠");
-	}
+    public void catchMouse() {
+	System.out.println("抓老鼠");
+    }
 }
 
-class Dog extends Animal
-{
-	public void eat()
-	{
-		System.out.println("吃骨头");
-	}
+class Dog extends Animal {
+    public void eat() {
+	System.out.println("吃骨头");
+    }
 
-	public void kanJia()
-	{
-		System.out.println("看家");
-	}
+    public void kanJia() {
+	System.out.println("看家");
+    }
 }
 
-class Pig extends Animal
-{
-	public void eat()
-	{
-		System.out.println("吃饲料");
-	}
+class Pig extends Animal {
+    public void eat() {
+	System.out.println("吃饲料");
+    }
 
-	public void gongDi()
-	{
-		System.out.println("拱地");
-	}
+    public void gongDi() {
+	System.out.println("拱地");
+    }
 }
 
-//-----------------------------------------------------------上面定义子类，下面调用
+// -----------------------------------------------------------上面定义子类，下面调用
 
-class DuoTaiDemo
-{
-	public static void main(String[] args) 
-	{
-		/*
-		Cat c = new Cat();
-		function(c);
-		Dog d = new Dog();
-		function(d);
-		function(new Pig());
-		*/
-		//Animal c = new Cat();
-		//c.eat();注意Animal和Cat类中都有eat方法，必然是执行子类中的eat(因为覆盖性)
-		function(new Cat());
-		function(new Dog());
-		function(new Pig());
-	}
-	
+class DuoTaiDemo {
+    public static void main(String[] args) {
 	/*
-	public static void function(Cat c)
-	{
-		c.eat();
-	}
-	public static void function(Dog d)
-	{
-		d.eat();
-	}
-    public static void function(Pig p)
-	{
-		p.eat(); 
-	}
-	*/
-	public static void function(Animal a)//注意是Animal相当于Animal a = new Cat();
-	{
-		a.eat();
-	}
+	 * Cat c = new Cat(); function(c); Dog d = new Dog(); function(d); function(new
+	 * Pig());
+	 */
+	// Animal c = new Cat();
+	// c.eat();注意Animal和Cat类中都有eat方法，必然是执行子类中的eat(因为覆盖性)
+	function(new Cat());
+	function(new Dog());
+	function(new Pig());
+    }
+
+    /*
+     * public static void function(Cat c) { c.eat(); } public static void
+     * function(Dog d) { d.eat(); } public static void function(Pig p) { p.eat(); }
+     */
+    public static void function(Animal a)// 注意是Animal相当于Animal a = new Cat();
+    {
+	a.eat();
+    }
 }

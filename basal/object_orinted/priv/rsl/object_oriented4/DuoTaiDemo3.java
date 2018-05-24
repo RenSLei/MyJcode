@@ -49,7 +49,7 @@ class AdvStudent extends Student
 	}
 }
 
-//----------------------------------------------------------------主函数建立工具类的对象，调用其功能就行了，传递参数是新建的具体类的对象
+//--主函数建立工具类的对象，调用其功能就行了，传递参数是新建的具体类的对象
 class  DuoTaiDemo3
 {
 	public static void main(String[] args) 

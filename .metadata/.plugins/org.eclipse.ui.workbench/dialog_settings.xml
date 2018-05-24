@@ -17,11 +17,20 @@
 		</list>
 	</section>
 	<section name="ImportExportAction">
-		<item value="org.eclipse.e4.ui.importer.wizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.FileSystem" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
 		</list>
 	</section>
 	<section name="FileSystemImportWizard">
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="F:\java\一、javaSE\day07_面向对象\01-02继承"/>
+			<item value="F:\java\一、javaSE\day23_网络编程1\23天-06-网络编程(Socket)"/>
+			<item value="F:\java\一、javaSE\day23_网络编程1\23天-05-网络编程(TCP和UDP)"/>
+			<item value="F:\java\一、javaSE\day23_网络编程1\23天-03-网络编程(网络模型)"/>
+			<item value="F:\java\一、javaSE\day23_网络编程1\23天-01-网络编程(概述)"/>
+		</list>
 	</section>
 </section>
