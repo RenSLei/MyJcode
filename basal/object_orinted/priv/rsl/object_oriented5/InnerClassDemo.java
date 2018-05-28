@@ -1,6 +1,8 @@
 package priv.rsl.object_oriented5;
-/*
-内部类的访问规则:
+
+
+/**
+ * 内部类的访问规则:
 1、内部类可以直接访问外部类中的成员，包括私有。
 之所以可以直接访问外部类中的成员，是因为内部类中持有了一个外部类的引用
 格式：外部类名.this
@@ -18,39 +20,43 @@ static:内部类就具备Static的特性。
 
 在外部其他类中，如何直接访问static内部类的非静态呢？
 
+ * @author WinWin
+ * @since 1.0
+ */
 
-*/
+class Outer {
+    private int x = 8;
 
-class Outer
-{
-	private int x = 8;
-	class Inner//内部类
-	{
-		int x = 5;
-		void function()
-		{
-			int x = 3;
-			System.out.println("inner:"+x);
-			System.out.println("inner:"+this.x);
-			System.out.println("inner:"+Outer.this.x);
-		}
+    class Inner// 内部类
+    {
+	int x = 5;
+
+	void function() {
+	    int x = 3;
+	    System.out.println("inner:" + x);
+	    System.out.println("inner:" + this.x);
+	    System.out.println("inner:" + Outer.this.x);
 	}
-	void method()
-	{
-		Inner in = new Inner();//外部类要访问内部类，必须建立内部对象
-	    in.function();
-	}
+    }
+
+    void method() {
+	Inner in = new Inner();// 外部类要访问内部类，必须建立内部对象
+	in.function();
+    }
 }
 
-class InnerClassDemo 
-{
-	public static void main(String[] args) 
-	{
-		Outer2 out = new Outer2();
-		out.method();
+/**
+ * 描述内部类的使用
+ * @author WinWin
+ *
+ */
+class InnerClassDemo {
+    public static void main(String[] args) {
+	Outer2 out = new Outer2();
+	out.method();
 
-		//直接访问内部类中的成员。
-		//Outer.Inner in = new Outer().new Inner();//一种格式，面试用得较多
-		//in.function();
-	}
+	// 直接访问内部类中的成员。
+	// Outer.Inner in = new Outer().new Inner();//一种格式，面试用得较多
+	// in.function();
+    }
 }
