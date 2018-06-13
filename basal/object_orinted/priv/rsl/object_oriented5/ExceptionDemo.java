@@ -36,26 +36,20 @@ finally
 String getMessage();获取异常信息。
 */
 
-class Demo
-{
-	int div(int a, int b)
-	{
+class Demo{
+	int div(int a, int b){
 		return a/b;
 	}
 }
 
-class ExceptionDemo 
-{
-	public static void main(String[] args) 
-	{
-		Demo2 c = new Demo2();
-		try
-		{
+class ExceptionDemo {
+	public static void main(String[] args) {
+		Demo c = new Demo();
+		try{
 			int x = c.div(4,0);
 			System.out.println("x="+x);
 		}
-		catch (Exception e)
-		{
+		catch (Exception e){
 			System.out.println("除零啦");
 			System.out.println(e.getMessage());//     /by zero
 

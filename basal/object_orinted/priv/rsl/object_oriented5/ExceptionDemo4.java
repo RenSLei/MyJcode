@@ -38,63 +38,48 @@ throws和throws的区别：
 
 */
 
-class FuShuException extends Exception
-{
-	/*
-	private String msg;
-	FuShuException(String msg)
-	{
-		this.msg = msg;
-	}
-	public String getMessage()
-	{
-		return msg;
-	}
-	太麻烦
-	*/
-	//下面用此方法完成自定义异常：
-	private int num;
-	FuShuException(String msg,int num)
-	{
-		super(msg);
-		this.num = num;
-	}
-	public int getFuShu()
-	{
-		return num;
-	}
-	FuShuException()
-	{
-		super();
-	}
-	
+class FuShuException extends Exception {
+    /*
+     * private String msg; FuShuException(String msg) { this.msg = msg; } public
+     * String getMessage() { return msg; } 太麻烦
+     */
+    // 下面用此方法完成自定义异常：
+    private int num;
+
+    FuShuException(String msg, int num) {
+	super(msg);
+	this.num = num;
+    }
+
+    public int getFuShu() {
+	return num;
+    }
+
+    FuShuException() {
+	super();
+    }
+
 }
 
-class Demo4
-{
-	int div(int a, int b)throws FuShuException//函数内已经throw了，那么函数上就要声明。
-	{
-		if(b<0)
-			throw new FuShuException("出现负数",b);//手动通过throw关键字抛出一个自定义异常对象。
-		return a/b;
-	}
+class Demo4 {
+    int div(int a, int b) throws FuShuException// 函数内已经throw了，那么函数上就要声明。
+    { // 手动通过throw关键字抛出一个自定义异常对象。
+	if (b < 0)
+	    throw new FuShuException("出现负数", b);
+	return a / b;
+    }
 }
 
-class ExceptionDemo4 
-{
-	public static void main(String[] args)
-	{
-		Demo4 c = new Demo4();
-		try
-		{
-			int x = c.div(4,-1);
-			System.out.println("x="+x);
-		}
-		catch (FuShuException e)
-		{
-			System.out.println(e.toString());
-			System.out.println("错误的负数是："+e.getFuShu());
-		}
-		System.out.println("over");
+public class ExceptionDemo4 {
+    public static void main(String[] args) {
+	Demo4 c = new Demo4();
+	try {
+	    int x = c.div(4, -1);
+	    System.out.println("x=" + x);
+	} catch (FuShuException e) {
+	    System.out.println(e.toString());
+	    System.out.println("错误的负数是：" + e.getFuShu());
 	}
+	System.out.println("over");
+    }
 }

@@ -1,7 +1,5 @@
 1-内部类的访问规则   ----InnerClassDemo.java
 
-11-RuntimeException   ----ExceptionDemo5.java
-
 2-静态内部类   ----InnerClassDemo2.java
 
 4-匿名内部类   ----InnerClassDemo3.java   ----InnerClassDemo4.java   ----InnerClassTest.java   ----InnerTest.java
@@ -14,3 +12,4 @@
 
 9-自定义异常   ----ExceptionDemo4.java
 
+11-RuntimeException   ----ExceptionDemo5.java

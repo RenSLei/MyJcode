@@ -21,37 +21,31 @@ Exception 中有一个特殊的子类异常：RuntimeException 运行时异常
 2、编译时不被检测的异常（运行时异常，RuntimeException以及其子类）
 */
 
-
-
-
-class FuShuException5 extends RuntimeException
-{
-	public FuShuException5(String msg)
-	{
-		super(msg);
-	}
-} 
-class Demo5
-{
-	int div(int a, int b)//注意，FuShuException继承了RuntimeException，函数内抛出自定义异常，就不用在函数上声明throws ArithmeticException！！！
-	{
-		if(b<0)
-			throw new FuShuException5("除数为负数了！");
-		if(b==0)
-			throw new FuShuException5("除数为零了！");
-		return a/b;
-		//throw new ArithmeticException("被零除了")
-	}
+class FuShuException5 extends RuntimeException {
+    public FuShuException5(String msg) {
+	super(msg);
+    }
 }
 
-class ExceptionDemo5 
-{
-	public static void main(String[] args) 
-	{
-		Demo5 d = new Demo5();
-		 int x = d.div(4,-3);
-		System.out.println("x="+x);
+class Demo5 {
+    int div(int a, int b)// 注意，FuShuException继承了RuntimeException，函数内抛出自定义异常，就不用在函数上声明throws
+			 // ArithmeticException！！！
+    {
+	if (b < 0)
+	    throw new FuShuException5("除数为负数了！");
+	if (b == 0)
+	    throw new FuShuException5("除数为零了！");
+	return a / b;
+	// throw new ArithmeticException("被零除了")
+    }
+}
 
-		System.out.println("over");
-	}
+class ExceptionDemo5 {
+    public static void main(String[] args) {
+	Demo5 d = new Demo5();
+	int x = d.div(4, -3);
+	System.out.println("x=" + x);
+
+	System.out.println("over");
+    }
 }

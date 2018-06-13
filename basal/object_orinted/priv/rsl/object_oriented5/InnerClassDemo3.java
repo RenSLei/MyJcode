@@ -6,27 +6,23 @@ package priv.rsl.object_oriented5;
    但是不可以访问它所在的局部中的变量。只能访问被final修饰的局部变量。
 */
 
-class Outer3
-{
-	int x = 3;
-	void method(final int a)
+class Outer3 {
+    int x = 3;
+
+    void method(final int a) {
+	final int y = 4;// 只能访问被final修饰的局部变量
+	class Inner// 不可以被成员修饰符修饰
 	{
-		final int y = 4;//只能访问被final修饰的局部变量
-		class Inner//不可以被成员修饰符修饰
-		{
-			void function()
-			{
-				System.out.println(a);
-			}
-		}
-		new Inner().function();
+	    void function() {
+		System.out.println(a);
+	    }
 	}
+	new Inner().function();
+    }
 }
 
-class InnerClassDemo3 
-{
-	public static void main(String[] args) 
-	{
-		new Outer3().method(7);
-	}
+class InnerClassDemo3 {
+    public static void main(String[] args) {
+	new Outer3().method(7);
+    }
 }

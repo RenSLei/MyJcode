@@ -30,38 +30,35 @@ Outer.Inner.function();
 
 */
 
-class Outer2
-{
-	private static int x = 8;
+class Outer2 {
+    private static int x = 8;
 
-	static class Inner//静态内部类
-	{
-		static void function()
-		{
-			System.out.println("inner:"+x);
-		}
+    // 静态内部类
+    static class Inner {
+	//类中有成员是静态的，类一定是静态的
+	static void function() {
+	    System.out.println("inner:" + x);
 	}
+    }
 
-	static class Inner2
-	{
-		void show()
-		{
-			System.out.println("inner2 show");
-		}
+    static class Inner2 {
+	void show() {
+	    System.out.println("inner2 show");
 	}
-	public static void method()
-		{
-			new Inner2().show();//Inner2在Outer类内部中，又是静态的，直接新建Inner2对象来调用show方法
-			//Inner.function();内部类访问静态成员直接用类名调用
-		}
+    }
+
+    public static void method() {
+	new Inner2().show();// Inner2在Outer类内部中，又是静态的，直接新建Inner2对象来调用show方法
+	// Inner.function();内部类访问静态成员直接用类名调用
+    }
 }
-class InnerClassDemo2 
-{
-	public static void main(String[] args) 
-	{
-		Outer2.method();
-		Outer2.Inner.function();//直接访问static内部类的静态成员
-		//new Outer.Inner().function();在外部其他类中直接引用静态内部类的非静态功能的方法,new Outer.Inner()是一个整体，因为function是非静态的，所以要建立对象来调用
 
-	}
+class InnerClassDemo2 {
+    public static void main(String[] args) {
+	Outer2.method();
+	Outer2.Inner.function();// 直接访问static内部类的静态成员
+	// new Outer.Inner().show();在外部其他类中直接引用静态内部类的非静态功能的方法
+//	new Outer.Inner()是一个整体，因为show()是非静态的，所以要建立对象来调用
+
+    }
 }
