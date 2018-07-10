@@ -45,7 +45,7 @@ class Circle implements Shape
 	Circle(int radius)
 	{
 		if(radius<=0)
-			throw new NoValueException("非法");
+			throw new NoValueException("参数非法");
 		this.radius = radius;
 	}
 	public void getArea()
