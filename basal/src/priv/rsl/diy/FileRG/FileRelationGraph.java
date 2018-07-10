@@ -1,4 +1,4 @@
-package priv.rsl.diy;
+package priv.rsl.diy.FileRG;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -18,9 +18,8 @@ import java.util.Scanner;
     	f2 ---- 1.java ; 2.java ; 3.java
       思路：
      1，将文件夹F中的文件夹列表f1....fn
-      2，遍历F
-      {将文件夹fn中.java文件对象存储到list集合中,
-      将集合中的java文件名以及fn文件夹名写到F.txt文件中}
+     2，遍历fn
+      {将文件夹fn中.java文件对象存储到list集合中, 将集合中的java文件名以及fn文件夹名写到F.txt文件中}
       
       步骤：
       1、获取键盘输入的目录：并封装成File对象

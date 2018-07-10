@@ -1,4 +1,4 @@
-package priv.rsl.diy;
+package priv.rsl.diy.test;
 
 import java.io.BufferedReader;
 import java.io.IOException;

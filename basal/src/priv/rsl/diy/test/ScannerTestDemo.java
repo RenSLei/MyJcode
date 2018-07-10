@@ -1,4 +1,4 @@
-package priv.rsl.diy;
+package priv.rsl.diy.test;
 
 import java.util.Scanner;
 
@@ -16,6 +16,6 @@ public class ScannerTestDemo {
 	System.out.println(in.nextLine());
 	}
 	if(in!=null)
-	    in.close();
+	    in.close();//¹Ø±ÕÉ¨ÃèÆ÷
     }
 }

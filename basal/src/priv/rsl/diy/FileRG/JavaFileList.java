@@ -1,4 +1,4 @@
-package priv.rsl.diy;
+package priv.rsl.diy.FileRG;
 
 /*
 练习：提取指定类型的文件路径
