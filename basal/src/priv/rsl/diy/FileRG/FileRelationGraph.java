@@ -13,11 +13,18 @@ import java.util.Scanner;
 * @Description: TODO     
 * 描述：一个文件夹F下有n个子文件夹fn，每个fn下有n个文件或文件夹...
      初步需求：将F中的fn和其中的java文件的映射关系做出来。
-     如:获得一个文本文件，文件内容：	
-     	f1 ---- 1.java ; 2.java ; 3.java
-    	f2 ---- 1.java ; 2.java ; 3.java
+     如:
+     Fn(文件夹)
+     	|---f1(文件夹)
+     		|---java文件
+     	|---f2(文件夹)
+     		|---java文件
+     	|---f3(文件夹)
+     		|---java文件
+    想要的到的结果：
+     
       思路：
-     1，将文件夹F中的文件夹列表f1....fn
+     1，将文件夹File F.filelist()
      2，遍历fn
       {将文件夹fn中.java文件对象存储到list集合中, 将集合中的java文件名以及fn文件夹名写到F.txt文件中}
       
