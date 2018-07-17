@@ -13,7 +13,7 @@ import java.util.Scanner;
 /** 
 * @ClassName: FindJavaFile 
 * @Description: TODO 将一个文件夹下的所有java文件找出来并复制到另外一个文件夹中  
-* 需求分析：将文件夹下的.java文件找出并复制到另一个文件夹中
+* 需求分析：输入想要查找的目录，输入保存的txt文件名，将文件夹下的.java文件找出并复制到另一个文件夹中，
 分析：
 1、操作的是文本文档用writer或reader
 2、涉及源和目的，因此将用到io以及File对象
