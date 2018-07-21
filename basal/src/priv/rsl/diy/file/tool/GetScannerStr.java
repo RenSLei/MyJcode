@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @Description TODO 获取键盘输入的工具类，通过构造函数来初始化this对象的函数调用参数
  *
  */
-public class GetScannerStr {
+class GetScannerStr {
     
     private String mesg;
     

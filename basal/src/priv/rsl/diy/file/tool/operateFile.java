@@ -9,7 +9,13 @@ import java.io.IOException;
 import java.util.List;
 
 public class operateFile {
-    
+    static int n=5;
+
+    public static void setN(int n) {
+        operateFile.n = n;
+    }
+
+
     /**   
      * @Title fileToList   
      * @Description TODO  将指定目录下的所有指定的文件对象写入指定的List<file>集合中
@@ -57,13 +63,10 @@ public class operateFile {
 		     bufw.write(path);		     
 		     bufw.newLine();		     
 		     bufw.flush();	     
-		}
-		 
-
+		}	 
 	    } catch (IOException e) {
 		throw e;
 	    }
-
 	    finally {
 		try {
 		    if (bufw != null)
@@ -75,8 +78,6 @@ public class operateFile {
 	    return list.size();
 	}
     
-    
-
     /**
      * @Title: writeToFile
      * @Description: TODO 此方法将list集合中的文件对象表示的文件复制到新的文件中去 1、新的文件名用源的文件名
@@ -128,8 +129,7 @@ public class operateFile {
 		
 		System.out.println("copy over!\n");
 	    }
-	    
-	    return list.size();
+	  return list.size();
 	    
 	} catch (Exception e) {
 	    throw e;
@@ -149,4 +149,78 @@ public class operateFile {
 	    }
 	}
     }
+    
+    /**
+     * @Title: writeToFile 
+     * @Description: TODO -
+     *4、对于每一个目录：列出当前目录的文件列表，如果是指定的文件，那么将该文件名以及当前的目录名写入目标文件中：
+     *	1)用递归法查找文件
+     * 	2)注意控制空格数量的参数的变化，以及该方法的逻辑，需要好好理解
+     * 		对于每一个文件夹而言，首先将其子文件列出，对每一个子文件：
+     * 			1)类型审查：
+     * 				是目录，该如何做？
+     * 					n个空格|---目录名
+     * 					换行到此
+     * 					因为是目录，继续调用自身，调用之前将n+5，突出层级关系
+     * 					...
+     * 					调用回来的时候，将当前的n-5回到当前目录空格数的数量，保证对齐
+     * 				是文件，该如何做？
+     * 					n个空格---文件名
+     * 					     ---文件名
+     * 					 换行到此
+     * 			2)bufw的行为
+     * 
+     *	3)在这里只需要关心写入，因为源是文件对象的名称，不涉及读。因此可以使用BufferedWriter包装FileWriter
+     * 	4)涉及写的方式：append和Write方法的不同，append返回的是此输出流。write是直接写入文件。
+     *  	5)使用FileWriter中的构造方法，FileWriter(String fileName, boolean append) 参数设置为true 
+     * @param folder-需要操作的文件夹
+     * @param bufw-一个包装了FileWriter的BufferedWriter流缓冲对象，提高写入的效率
+     * @return void 
+     * @throws IOException
+     */ 
+     
+     public void writeToFile(File folder, BufferedWriter bufw,String type) throws IOException {
+ 	//对于每一层目录而言，默认里面是没有Java文件的，
+// 	boolean flag = false;
+ 	// 遍历每一个文件
+ 	File[] files = folder.listFiles();
+ 	if(files.length!=0){
+ 	    for (File file : files) {
+ 		    if (file.isDirectory()) {
+ 			
+ 			for(int i=0;i<n;i++) {
+ 			    bufw.write("  ");
+ 			}
+ 			bufw.write("|--");
+ 			
+ 			bufw.write(file.getName()+"(folder)");
+ 			bufw.newLine();
+ 			n=(n+5);
+ 			writeToFile(file, bufw,type);
+ 			n=n-5;
+ 			
+ 		    } else if (file.getName().endsWith(type)) {
+ 			
+ 			for(int i=0;i<n;i++) {
+ 			    bufw.write("  ");
+ 			}
+ 			
+ 			bufw.write("---");
+ 			bufw.write(file.getName()+",");
+ 			bufw.newLine();
+ 			
+ 			
+ 			
+// 			flag = true;
+ 		    }  
+ 		}
+ 	}
+ 	else {
+ 	    for(int i=0;i<n;i++) {
+ 		    bufw.write("  ");
+ 		}
+ 	    bufw.write("此文件夹为空");
+ 	    bufw.newLine();
+ 	}
+     }
 }

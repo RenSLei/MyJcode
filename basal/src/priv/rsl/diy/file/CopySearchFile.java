@@ -10,8 +10,8 @@ import priv.rsl.diy.file.tool.operateFile;
 
 /** 
 * @ClassName: FindJavaFile 
-* @Description: TODO 将一个文件夹下的所有java文件找出来并复制到另外一个文件夹中  
-* 需求分析：输入想要查找的目录，输入保存的txt文件名，将文件夹下的.java文件找出并复制到另一个文件夹中，
+* @Description: TODO 将一个文件夹下的所有指定类型的文件找出来并复制到另外一个文件夹中  
+* 需求分析：输入想要查找的目录，将文件夹下指定类型文件找出并复制到另一个文件夹中
 分析：
 1、操作的是文本文档用writer或reader
 2、涉及源和目的，因此将用到io以及File对象
@@ -25,7 +25,7 @@ import priv.rsl.diy.file.tool.operateFile;
 
 达到的效果：
 给出目录parentDirectory，
-以子目录Directory名分别建立文件夹将里面（不管是否还有文件夹）的所有.java文件写入到该对应的文件夹中
+以子目录Directory名分别建立文件夹将里面（不管是否还有文件夹）的所有指定类型的文件写入到该对应的文件夹中
 原：parentDirectory
      *            |---Directory1
      *            			|---file or Folder...
@@ -36,9 +36,9 @@ import priv.rsl.diy.file.tool.operateFile;
      *            
 终：目标文件夹
 	|---Directory1
-		|---Directory1下所有的.java文件
+		|---Directory1下所有指定类型的文件
         |---Directory2
-        	|---Directory2下所有的.java文件
+        	|---Directory2下所有指定类型的文件
         ...
         
 * @author rsl
@@ -57,7 +57,7 @@ public class CopySearchFile {
 	operateFile opf=new operateFile();
 	
 	//读取键盘录入的源文件夹：
-	File parentDir = gi.getDir("请输入被搜索的文件夹路径");
+	File parentDir = gi.getDir("请输入被搜索的文件夹路径:",false);
 	
 	//获取想要搜索的文件类型
 	String fileType= gi.getFileType("请输入想要查找的文件类型(如:.txt):");
@@ -73,17 +73,12 @@ public class CopySearchFile {
 	// 获取subDirs
 	subDirs = gi.getSubDirs(parentDir);
 	
-//	for (File file : subDirs) {
-//	    System.out.println(file.getName());
-//	    
-//	}
 	for (File subDir : subDirs) {
 	    
 	    List<File> filesList = new ArrayList<File>();
 	    try {
 		
 		opf.fileToList(subDir, filesList,fileType);
-//		System.out.println(filesList);
 		
 	    } catch (IOException e) {
 		
@@ -95,8 +90,6 @@ public class CopySearchFile {
 	    if(eachDesFolder.mkdirs()) {
 		System.out.println("create the folder"+subDir.getName()+" in "+desFolder+"   successful");
 	    }
-//	    System.out.println(eachDesFolder.exists());
-	    //将list中的文件复制到目标文件夹中去
 	    try {
 		n+=opf.copyFileToFolder(filesList, eachDesFolder);
 		

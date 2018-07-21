@@ -1,4 +1,4 @@
-package priv.rsl.diy.file;
+package priv.rsl.diy.test;
 
 import java.io.BufferedWriter;
 import java.io.File;

@@ -31,7 +31,7 @@ class SearchFilesPath {
 	operateFile opf=new operateFile();
 	
 	//获取想要搜索的文件夹路径，封装成file对象
-	File dir=gi.getDir("请输入要搜索的文件夹路径：");
+	File dir=gi.getDir("请输入要搜索的文件夹路径：",false);
 	
 	//获取想要搜索的文件类型
 	String fileType= gi.getFileType("请输入想要查找的文件类型(如.txt):");

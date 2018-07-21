@@ -50,28 +50,6 @@ public class GetInputstr {
 		return gs.getScanner();
 		
 	    }
-
-	    /**   
-	     * @Title getDir   
-	     * @Description TODO 获取用户输入的源文件夹路径  
-	     * @return      
-	     * @Return File 根据用户输入的文件夹所封装的File对象     
-	     */
-	 public File getDir(String mesg) {
-	     	//实例化一个获取键盘输入的对象
-	    	gs = new GetScannerStr(mesg);
-		
-		File dir = new File(gs.getScanner());
-		
-		if(!(dir.exists()))
-		{
-		    System.out.println("路径不存在，请重新输入");
-		    getDir(mesg);
-		}
-		return dir;
-	    }
-	 
-	 
 	
 	 /**   
 	 * @Title getDir   
@@ -92,12 +70,18 @@ public class GetInputstr {
 	  
 		if(!(dir.exists())&&flag)
 		{
+		    System.out.println("输入目录不存在！正在创建该目录......");
 		    if(dir.mkdirs()) {
 			System.out.println("输入目录不存在，已创建输入目录！");
 		    }
+		    else {
+			System.out.println("请按目录格式输入！如：c:\name1\name2...");
+			getDir(mesg,true);
+		    }
 		}
 		else if(!(dir.exists())){
-		    getDir(mesg);
+		    System.out.println("路径不存在，请重新输入");
+		    getDir(mesg,false);
 		}
 		return dir;
 	    }
