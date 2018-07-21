@@ -39,9 +39,9 @@
 		<item value="false" key="linkWithEditor"/>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
-		<item value="925" key="DIALOG_WIDTH"/>
-		<item value="1|Microsoft YaHei UI|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|-122|3|2|1|34|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
-		<item value="1030" key="DIALOG_HEIGHT"/>
+		<item value="745" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|12.0|0|WINDOWS|1|-16|0|0|0|400|0|0|0|-122|3|2|1|34|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="893" key="DIALOG_HEIGHT"/>
 		<item value="507" key="DIALOG_X_ORIGIN"/>
 		<item value="9" key="DIALOG_Y_ORIGIN"/>
 	</section>

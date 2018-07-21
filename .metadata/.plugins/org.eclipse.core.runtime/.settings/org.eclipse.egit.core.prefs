@@ -1,3 +1,4 @@
 GitRepositoriesView.GitDirectories=F\:\\MyJcode\\eclipseToGithubTest\\.git;F\:\\MyJcode\\enhance\\.git;F\:\\MyJcode\\basal\\.git;F\:\\MyJcode\\upload project to github test\\.git;F\:\\MyJcode\\.git;F\:\\MyJcode\\jdbc\\.git;F\:\\MyJcode\\UploadProjectToGithubTest\\.git;
 GitRepositoriesView.GitDirectories.relative=eclipseToGithubTest\\.git;enhance\\.git;basal\\.git;upload project to github test\\.git;.git;jdbc\\.git;UploadProjectToGithubTest\\.git;
+core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

@@ -3,4 +3,10 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="priv.rsl.diy.file.tool.GetInput"/>
+<fullyQualifiedTypeName name="priv.rsl.diy.file.tool.FileToList"/>
+<fullyQualifiedTypeName name="priv.rsl.diy.file.tool.GetScanner"/>
+<fullyQualifiedTypeName name="priv.rsl.diy.file.tool.GetScannerStr"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>
