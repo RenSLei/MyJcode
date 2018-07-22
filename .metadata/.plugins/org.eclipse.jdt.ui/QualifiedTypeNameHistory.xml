@@ -9,4 +9,6 @@
 <fullyQualifiedTypeName name="priv.rsl.diy.file.tool.GetScannerStr"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="priv.rsl.diy.file.tool.GetInputstr"/>
+<fullyQualifiedTypeName name="priv.rsl.diy.file.tool.operateFile"/>
 </qualifiedTypeNameHistroy>

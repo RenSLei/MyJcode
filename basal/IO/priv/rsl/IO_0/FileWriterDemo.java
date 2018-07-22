@@ -28,31 +28,29 @@ java.lang.Object
 			
 */
 
-
 import java.io.*;
-class FileWriterDemo 
-{
-	public static void main(String[] args) throws IOException
-	{
-		//查阅API文档可以知道，FileWriter类只有构造方法，而且没有空参数的构造方法
-		//所以，对象一被初始化就必须要明确被操作的文件。
-		//而且该文件被创建到指定目录下。如果该目录下已有同名文件，将被覆盖。
-		//其实该步就是在明确数据要存放的目的地。
-		FileWriter fw = new FileWriter("demo.txt");//此处若路径错，则抛出异常，所以要throws
 
-		//调用write方法，将字符串写入流中。
-		fw.write("fesgdrg");
+class FileWriterDemo {
+    public static void main(String[] args) throws IOException {
+	// 查阅API文档可以知道，FileWriter类只有构造方法，而且没有空参数的构造方法
+	// 所以，对象一被初始化就必须要明确被操作的文件。
+	// 而且该文件被创建到指定目录下。如果该目录下已有同名文件，将被覆盖。
+	// 其实该步就是在明确数据要存放的目的地。
+	FileWriter fw = new FileWriter("demo.txt");// 此处若路径错，则抛出异常，所以要throws
 
-		//刷新流对象中的缓冲中的数据。
-		//将数据刷到目的地文件中。
-		fw.flush();//此时文件中已经有数据了
+	// 调用write方法，将字符串写入流中。
+	fw.write("fesgdrg");
 
-		//还可以继续写入流中，如：fw.write("haha");fw.flush();
+	// 刷新流对象中的缓冲中的数据。
+	// 将数据刷到目的地文件中。
+	fw.flush();// 此时文件中已经有数据了
 
-		//关闭流资源，关闭之前会刷新一次内部的缓冲区中的数据。
-		//将数据刷到目的地中
-		//区别：flush刷新后，流可以继续使用，close刷新后，会将流关闭。
-		fw.close();//关闭之后就不能再写了。
-	
-	}
+	// 还可以继续写入流中，如：fw.write("haha");fw.flush();
+
+	// 关闭流资源，关闭之前会刷新一次内部的缓冲区中的数据。
+	// 将数据刷到目的地中
+	// 区别：flush刷新后，流可以继续使用，close刷新后，会将流关闭。
+	fw.close();// 关闭之后就不能再写了。
+
+    }
 }

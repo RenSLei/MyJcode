@@ -24,7 +24,7 @@
 	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
 	<item value="1920" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
 	<item value="1030" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
-	<item value="F:\java\四、JDBC\spring-framework-5.0.5.RELEASE-dist\spring-framework-5.0.5.RELEASE\libs" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="F:\stswp" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="D:\eclipse-workspace\javase_study_myself1\day07_面向对象" key="org.eclipse.jdt.ui.last.external.project"/>
 	<list key="SearchScopeActionGroup.working_set">
 	</list>
@@ -101,9 +101,9 @@
 	<section name="OccurrencesSearchResultPage">
 	</section>
 	<section name="DialogBounds_AddUnimplementedConstructorsDialog">
-		<item value="925" key="DIALOG_WIDTH"/>
-		<item value="1|Microsoft YaHei UI|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|-122|3|2|1|34|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
-		<item value="1042" key="DIALOG_HEIGHT"/>
+		<item value="745" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|12.0|0|WINDOWS|1|-16|0|0|0|400|0|0|0|-122|3|2|1|34|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="827" key="DIALOG_HEIGHT"/>
 		<item value="507" key="DIALOG_X_ORIGIN"/>
 		<item value="9" key="DIALOG_Y_ORIGIN"/>
 	</section>
@@ -211,9 +211,9 @@
 		</section>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item value="944" key="DIALOG_WIDTH"/>
-		<item value="1|Microsoft YaHei UI|12.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|-122|3|2|1|34|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
-		<item value="1042" key="DIALOG_HEIGHT"/>
+		<item value="761" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|12.0|0|WINDOWS|1|-16|0|0|0|400|0|0|0|-122|3|2|1|34|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="913" key="DIALOG_HEIGHT"/>
 		<item value="154" key="DIALOG_X_ORIGIN"/>
 		<item value="9" key="DIALOG_Y_ORIGIN"/>
 	</section>
